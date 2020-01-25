@@ -7,34 +7,51 @@ input[type=text], select, textarea {
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px;
-    resize: vertical 
-  }
-  
-  
-  input[type=submit] {
+    transition:  background-color 2s, height 1s;
+}
+input[type=text]:hover{
+  background-color: rgba(144, 175, 174, 0.301);
+}
+
+ input[type=submit] {
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition:  background-color 2s, height 1s;
+  }
+  .slide{
+    font-weight: bold;
+    position: relative;
+    animation: slide 5s infinite;
+  }
+
+  .slide{animation-timing-function: ease;}
+
+  @keyframes slide {
+    from {left: 0px;}
+    to {left: 150px;}
   }
   
   
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: rgba(16, 161, 206, 0.828);
   }
   
   
   .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #ffffffd8;
     padding: 20px;
     box-shadow:  10px 20px 30px #ccc;
     width:100%;
     position: relative;
     left: 40%;
     top: 10px;
+    text-align: center;
+
   }
   .hero{
     
@@ -42,6 +59,7 @@ input[type=text], select, textarea {
       height:50% ;
       width:100%;
       z-index: -1;
+      
   }
   .content{
     position: absolute;
